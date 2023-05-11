@@ -12,7 +12,7 @@ function getPosts() {
 const PostLink = ({ post }) => (
   <li>
     <Link href="/p/[id]" as={`/p/${post.id}`}>
-      <a>{post.title}</a>
+      {post.title}
     </Link>
     <style jsx>{`
       li {
@@ -36,7 +36,7 @@ const PostLink = ({ post }) => (
 export default function Blog() {
   return (
     <Layout>
-      <h1>My Blog</h1>
+      <h1>Menuroid</h1>
       <ul>
         {getPosts().map(post => (
           <PostLink key={post.id} post={post} />
